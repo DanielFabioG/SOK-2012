@@ -1,0 +1,178 @@
+---
+title: "Presentasjon SOK-2012"
+subtitle: "Handelshøgskolen"
+date: last-modified
+date-format: "DD-MM-YYYY"
+echo: false
+warning: false
+format: 
+  revealjs:
+    auto-stretch: false
+    theme: moon
+    view-distance: 10
+    incremental: true
+    smaller: true
+---
+
+```{r}
+#| output: false
+
+rm(list = ls())
+library(tidyverse)
+```
+
+## Hva er sannsynligheten for å bytte konvolutt i Monty Hall-problemet?
+
+-   Jeg vil finne dette ut som som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene.
+
+-   Randomized controlled trial (RCT) design
+
+-   Kontrollgruppen får ikke noe kurs, mens eksperimentgruppen får et kurs i sannsynlighetsteori
+
+::: notes
+Vi randomiserer deltakerne til enten kontrollgruppen eller eksperimentgruppen. Kontrollgruppen mottar ikke noe kurs, mens eksperimentgruppen deltar i et kurs i sannsynlighetsteori.
+
+Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighetsregler, forventningsverdier, uavhengighet, og en grundig gjennomgang av Monty Hall-problemet og Bayes' teorem. Kommer tilbake til dette senere.
+:::
+
+## Monty-Hall problemet
+
+::: columns
+::: {.column width="50%"}
+![](dokumentobjekter/figurer/Monty_open_door.png){width="520"} 
+
+-   Deltakeren velger en dør
+
+-   Verten åpner en annen dør med en geit
+
+-   Deltakeren får muligheten til å bytte dør
+
+-   Hva bør deltakeren gjøre for å maksimere sjansen for å vinne bilen?
+:::
+
+::: {.column width="50%"}
+-   Bytte dør eller holde seg til den opprinnelige døren?
+
+-   Når du først valgte en dør, var sannsynligheten for at bilen er bak den døren du valgte 1/3
+
+-  Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
+
+-   Derfor bør du bytte dør for å maksimere sjansen for å vinne bilen
+:::
+:::
+
+::: notes
+Du er deltaker i et spillshow med tre dører: Bak en dør er det en bil (premien du vil ha), og bak de to andre dørene er det geiter eller ingenting.
+
+Du velger en dør, og verten åpner en annen dør som har en geit bak seg. Du får deretter muligheten til å bytte dør eller beholde den opprinnelige døren.
+
+Hva bør du gjøre for å maksimere sjansen for å vinne bilen?
+:::
+
+## Eksperimentelt oppsett
+
+-   Før kurset gis begge gruppene 100 kr hver.
+
+-   De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill.
+
+-   I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme.
+
+-   Eksperimentlederen åpner deretter en av de to resterende konvoluttene som er tom og gir deltakeren valget om å bytte til den gjenværende konvolutten eller beholde det opprinnelige valget.
+
+-   Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har deltatt i kurset.
+
+::: notes
+Eksperimentell oppsett: Før kurset gis begge gruppene 100 kr hver. De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill. I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme. Eksperimentlederen åpner deretter en av de to resterende konvoluttene som er tom og gir deltakeren valget om å bytte til den gjenværende konvolutten eller beholde det opprinnelige valget. Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har deltatt i kurset. Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.
+:::
+
+## Effekt og analyse
+
+-   Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.
+
+-   Bevis på best valg
+
+-   For å vise dette matematisk så definerer vi hendelsene:
+
+-   $G_i$: Hendelsen at gevinsten (150 kr) er i konvolutt $i$ (hvor $i$ kan være 1, 2, eller 3).
+
+-   $D_j$: Hendelsen at deltakeren velger konvolutt $j$ (hvor $j$ også kan være 1, 2, eller 3).
+
+-   $V_k$: Hendelsen at verten åpner konvolutt $k$ (hvor $k$ kan være 1, 2, eller 3) og viser at den er tom.
+
+::: notes
+Et mål $M_t$ av effekten X på Y ved å studere $M_{\overline T} − M_{\underline T}$ .
+
+Når vi nå ser hvilke valg de 2 gruppene har tatt, så kan vi se om det har vært en signifikant endring i om de velger å kaste terningen eller ikke.
+
+Siden vi vet at konvolutten som åpnes er tom så setter vi opp Monty Hall problemet i med Bayes. Da kan vi se hvordan denne informasjonen påvirker eller "oppdaterer" sannsynligheten for at premien befinner seg i en bestemt konvolutt.
+
+For å vise dette matematisk så definerer vi hendelsene:
+
+-   $G_i$: Hendelsen at gevinsten (150 kr) er i konvolutt $i$ (hvor $i$ kan være 1, 2, eller 3).
+
+-   $D_j$: Hendelsen at deltakeren velger konvolutt $j$ (hvor $j$ også kan være 1, 2, eller 3).
+
+-   $V_k$: Hendelsen at verten åpner konvolutt $k$ (hvor $k$ kan være 1, 2, eller 3) og viser at den er tom.
+:::
+
+## Uavhengighet, sannsynlighet og avhengighet
+
+-   Vi antar at deltakeren velger en konvolutt tilfeldig, og at gevinsten er plassert tilfeldig i en av de tre konvoluttene. Dette betyr at hendelsene $G_i$ og $D_j$ er uavhengige for alle $i$ og $j$ .
+
+-   Før noe valg er gjort, er sannsynligheten for at gevinsten er i en hvilken som helst konvolutt lik: $$ P(G_i) = P(D_j) = P(V_k) = \frac{1}{3} $$ for $i, j, k = 1, 2, 3$.
+
+::: notes
+Tekst her for speaker notes
+:::
+
+## Avhengighet
+
+-   Når vi åpner den andre konvolutten så er den avhengig av hvilken konvolutt deltakeren har valgt og hvor gevinsten befinner seg. Vi åpner alltid åpner en tom konvolutt og aldri den som deltakeren har valgt eller den som inneholder gevinsten.
+
+-   Dette betyr at: $$ P(V_k \mid G_i, D_j) $$ er 0 hvis $k = i$ eller $k = j$ (med mindre $i = j$), og ellers 1 delt på antall gjenværende konvolutter.
+
+::: notes
+Tekst her for speaker notes
+:::
+
+## Bayes teorm
+
+-   $$ P(G_i \mid V_k, D_j) = \frac{P(V_k \mid G_i, D_j) \cdot P(G_i)}{P(V_k \mid D_j)} $$
+
+-   For å beregne $P(V_k \mid D_j)$ under brøkstreken er sannsynligheten for at verten åpner konvolutt $k$, gitt at deltakeren har valgt konvolutt $j$.
+
+-   Dette krever marginalisering over alle mulige steder gevinsten kan være: $$ P(V_k \mid D_j) = \sum_{i=1}^3 P(V_k \mid G_i, D_j) \cdot P(G_i) $$
+
+::: notes
+Bayes teorem forteller oss hvordan vi kan oppdatere sannsynligheten for at gevinsten er i en bestemt konvolutt gitt at verten åpner en annen konvolutt:
+:::
+
+## Bayes teorem forts
+
+Anta at deltakeren velger konvolutt 1 ($D_1$) og verten åpner konvolutt 3 ( $V_3$ ), som er tom. Vi vil beregne $P(G_2 \mid V_3, D_1)$.
+
+-   $P(V_3 \mid G_1, D_1) = 1/2$ fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.
+
+-   $P(V_3 \mid G_2, D_1) = 1$ fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.
+
+-   $P(V_3 \mid G_3, D_1) = 0$ fordi verten aldri vil åpne konvolutten med gevinsten.
+
+-   $$ P(V_3 \mid D_1) = P(V_3 \mid G_1, D_1) \cdot P(G_1) + P(V_3 \mid G_2, D_1) \cdot P(G_2) + P(V_3 \mid G_3, D_1) \cdot P(G_3) $$
+
+::: notes
+Notes her
+:::
+
+## Bayes teorem forts
+
+-   $$ P(V_3 \mid D_1) = \frac{1}{2} \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3} = \frac{1}{2} $$
+
+-   $$ P(G_2 \mid V_3, D_1) = \frac{P(V_3 \mid G_2, D_1) \cdot P(G_2)}{P(V_3 \mid D_1)} = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3} $$
+
+-   Dette viser at det er en $\frac{2}{3}$ sannsynlighet for at gevinsten er i den konvolutten deltakeren ikke valgte, som er konvolutt 2 i dette tilfellet.
+
+## Bayes teorem eksempel med animasjon om tid
+
+::: notes
+Notes her bruh
+:::
