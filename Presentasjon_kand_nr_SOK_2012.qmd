@@ -9,9 +9,8 @@ format:
   revealjs:
     auto-stretch: false
     theme: moon
-    view-distance: 10
-    incremental: true
     smaller: true
+    view-distance: 10
 ---
 
 ```{r}
@@ -21,15 +20,99 @@ rm(list = ls())
 library(tidyverse)
 ```
 
-## Hva er sannsynligheten for å bytte konvolutt i Monty Hall-problemet?
+## Hvilke spørsmål om menneskelig adferd kan besvares ved hjelp av eksperimentelle metoder? {auto-animate=true}
 
+:::: {.columns}
+
+::: {.column width="60%"}
+:::{.fragment .highlight-green fragment-index=1}
+Effekten av belønning på prestasjon
+:::
+
+:::{.fragment .highlight-red fragment-index=1}
+Effekten av kjønn på lederskaps-evner
+:::
+
+:::{.fragment .highlight-green fragment-index=1}
+Effekten av søvnmangel på kognitiv ytelse
+:::
+
+:::{.fragment .highlight-red fragment-index=1}
+Effekten av medfødt intelligens på skoleprestasjoner
+:::
+
+:::{.fragment .highlight-green fragment-index=1}
+Effekten av sosial påvirkning på beslutningstaking
+:::
+:::
+::: {.column width="40%"}
+
+:::{.fragment .fade-right fragment-index=1}
+**Ja**
+:::
+
+:::{.fragment .fade-right fragment-index=1}
+**Nei**
+:::
+
+:::{.fragment .fade-right fragment-index=1}
+**Ja**
+:::
+
+:::{.fragment .fade-right fragment-index=1}
+**Nei**
+:::
+
+:::{.fragment .fade-right fragment-index=1}
+**Ja**
+:::
+:::
+
+::::
+
+
+::: notes
+Effekten av belønning på prestasjon
+
+Metode: Tilby ulike grupper deltakere forskjellige typer eller mengder belønning (f.eks. penger, ros, poeng) for å se hvordan det påvirker deres prestasjoner på en oppgave.
+
+Effekten av kjønn på lederskaps-evner
+
+Metode: La en gruppe deltakere få tilstrekkelig søvn, mens en annen gruppe får redusert søvn, og deretter måle deres kognitive ytelse gjennom tester.
+
+Effekten av søvnmangel på kognitiv ytelse
+
+Metode: La en gruppe deltakere få tilstrekkelig søvn, mens en annen gruppe får redusert søvn, og deretter måle deres kognitive ytelse gjennom tester.
+
+Effekten av medfødt intelligens på skoleprestasjoner
+
+Problem: Medfødt intelligens er en variabel som ikke kan manipuleres direkte. Forskning på dette området må derfor benytte seg av observasjonsstudier, tvillingstudier, eller andre metoder som ikke involverer eksperimentell manipulasjon.
+
+Effekten av sosial påvirkning på beslutningstaking
+
+Metode: Utsette deltakerne for ulike typer sosial påvirkning (f.eks. gruppepress, autoritetsfigurer) og observere hvordan dette påvirker deres valg i en beslutningstakningsprosess.
+:::
+
+## Problemstilling
+
+**Hva er sannsynligheten for å bytte konvolutt i Monty Hall-problemet, målt som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene?**
+
+::: notes
+:::
+
+## RCT (Randomized Controlled Trial)
+
+
+
+
+
+
+
+::: notes
 -   Jeg vil finne dette ut som som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene.
-
--   Randomized controlled trial (RCT) design
 
 -   Kontrollgruppen får ikke noe kurs, mens eksperimentgruppen får et kurs i sannsynlighetsteori
 
-::: notes
 Vi randomiserer deltakerne til enten kontrollgruppen eller eksperimentgruppen. Kontrollgruppen mottar ikke noe kurs, mens eksperimentgruppen deltar i et kurs i sannsynlighetsteori.
 
 Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighetsregler, forventningsverdier, uavhengighet, og en grundig gjennomgang av Monty Hall-problemet og Bayes' teorem. Kommer tilbake til dette senere.
@@ -39,7 +122,7 @@ Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighet
 
 ::: columns
 ::: {.column width="50%"}
-![](dokumentobjekter/figurer/Monty_open_door.png){width="520"} 
+![](dokumentobjekter/figurer/Monty_open_door.png){width="520"}
 
 -   Deltakeren velger en dør
 
@@ -55,7 +138,7 @@ Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighet
 
 -   Når du først valgte en dør, var sannsynligheten for at bilen er bak den døren du valgte 1/3
 
--  Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
+-   Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
 
 -   Derfor bør du bytte dør for å maksimere sjansen for å vinne bilen
 :::
