@@ -13,63 +13,53 @@ format:
     view-distance: 10
 ---
 
-```{r}
-#| output: false
+## Hvilke spørsmål om menneskelig adferd kan besvares ved hjelp av eksperimentelle metoder? {auto-animate="true"}
 
-rm(list = ls())
-library(tidyverse)
-```
-
-## Hvilke spørsmål om menneskelig adferd kan besvares ved hjelp av eksperimentelle metoder? {auto-animate=true}
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="60%"}
-:::{.fragment .highlight-green fragment-index=1}
+::: {.fragment .highlight-green fragment-index="1"}
 Effekten av belønning på prestasjon
 :::
 
-:::{.fragment .highlight-red fragment-index=1}
+::: {.fragment .highlight-red fragment-index="1"}
 Effekten av kjønn på lederskaps-evner
 :::
 
-:::{.fragment .highlight-green fragment-index=1}
+::: {.fragment .highlight-green fragment-index="1"}
 Effekten av søvnmangel på kognitiv ytelse
 :::
 
-:::{.fragment .highlight-red fragment-index=1}
+::: {.fragment .highlight-red fragment-index="1"}
 Effekten av medfødt intelligens på skoleprestasjoner
 :::
 
-:::{.fragment .highlight-green fragment-index=1}
+::: {.fragment .highlight-green fragment-index="1"}
 Effekten av sosial påvirkning på beslutningstaking
 :::
 :::
+
 ::: {.column width="40%"}
-
-:::{.fragment .fade-right fragment-index=1}
+::: {.fragment .fade-right fragment-index="1"}
 **Ja**
 :::
 
-:::{.fragment .fade-right fragment-index=1}
+::: {.fragment .fade-right fragment-index="1"}
 **Nei**
 :::
 
-:::{.fragment .fade-right fragment-index=1}
+::: {.fragment .fade-right fragment-index="1"}
 **Ja**
 :::
 
-:::{.fragment .fade-right fragment-index=1}
+::: {.fragment .fade-right fragment-index="1"}
 **Nei**
 :::
 
-:::{.fragment .fade-right fragment-index=1}
+::: {.fragment .fade-right fragment-index="1"}
 **Ja**
 :::
 :::
-
-::::
-
+:::
 
 ::: notes
 Effekten av belønning på prestasjon
@@ -100,13 +90,45 @@ Metode: Utsette deltakerne for ulike typer sosial påvirkning (f.eks. gruppepres
 ::: notes
 :::
 
-## RCT (Randomized Controlled Trial)
+## Randomized Controlled Trial (RCT)
 
+Eksempel: Testing av nytt treningsprogram på fysisk helsetilstand
 
+::: columns
+::: {.column width="50%"}
+Venstre kontrollgruppe:
 
+Tester fysisk helsetilstand før og 12 uker etter treningsprogrammet
 
+::: {.fragment .highlight-green fragment-index="1"}
+Har økt muskelmasse og redusert fettprosent etter treningsprogrammet
+:::
 
+::: {.fragment .fade-down fragment-index="2"}
+Venstre kontrollgruppe har en gjennomsnittsalder på 16 år
+:::
+:::
 
+::: {.column width="50%"}
+Høyre kontrollgruppe:
+
+Tester fysisk helsetilstand før og 12 uker etter placebo-programmet
+
+::: {.fragment .highlight-red fragment-index="1"}
+Har ingen endring i muskelmasse eller fettprosent etter placebo-programmet
+:::
+
+::: {.fragment .fade-down fragment-index="2"}
+Høyre kontrollgruppe har en gjennomsnittsalder på 76 år
+:::
+:::
+
+Hvorfor blir dette feil?
+
+::: {.fragment .fade-up fragment-index="3"}
+RCT er en eksperimentell metode som krever at deltakerne **tilfeldig** fordeles til enten en eksperimentell gruppe eller en kontrollgruppe. Dette gjør det mulig å sammenligne effekten av en intervensjon med en kontrollgruppe som ikke mottar intervensjonen.
+:::
+:::
 
 ::: notes
 -   Jeg vil finne dette ut som som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene.
@@ -124,23 +146,23 @@ Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighet
 ::: {.column width="50%"}
 ![](dokumentobjekter/figurer/Monty_open_door.png){width="520"}
 
--   Deltakeren velger en dør
+::: {.fragment .fade-down fragment-index="1"}
+$\frac{1}{3}$                                     $\frac{1}{3}$                                  $\frac{1}{3}$
+:::
 
--   Verten åpner en annen dør med en geit
+Deltakeren velger dør nummer 1
 
--   Deltakeren får muligheten til å bytte dør
+Verten åpner dør nummer 3 med en geit
 
--   Hva bør deltakeren gjøre for å maksimere sjansen for å vinne bilen?
+Deltakeren får muligheten til å bytte dør
+
+Hva bør deltakeren gjøre for å maksimere sjansen for å vinne bilen?
 :::
 
 ::: {.column width="50%"}
--   Bytte dør eller holde seg til den opprinnelige døren?
-
--   Når du først valgte en dør, var sannsynligheten for at bilen er bak den døren du valgte 1/3
-
--   Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
-
--   Derfor bør du bytte dør for å maksimere sjansen for å vinne bilen
+::: {.fragment .fade-down fragment-index="1"}
+Om deltaker beholder dør nummer 1 = $\frac{1}{3}$ sjanse
+:::
 :::
 :::
 
@@ -150,6 +172,125 @@ Du er deltaker i et spillshow med tre dører: Bak en dør er det en bil (premien
 Du velger en dør, og verten åpner en annen dør som har en geit bak seg. Du får deretter muligheten til å bytte dør eller beholde den opprinnelige døren.
 
 Hva bør du gjøre for å maksimere sjansen for å vinne bilen?
+
+Bytte dør eller holde seg til den opprinnelige døren?
+
+Når du først valgte en dør, var sannsynligheten for at bilen er bak den døren du valgte 1/3
+
+Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
+
+Derfor bør du bytte dør for å maksimere sjansen for å vinne bilen
+:::
+
+## Monty-Hall problemet
+
+::: columns
+::: {.column width="50%"}
+![](dokumentobjekter/figurer/Monty-MiddleCar.png){width="520"}
+
+::: {.fragment .fade-down fragment-index="1"}
+                                         $\frac{1}{3}$              +             $\frac{1}{3}$ = $\frac{2}{3}$
+:::
+
+Deltakeren velger dør nummer 1
+
+Verten åpner dør nummer 3 med en geit
+
+Deltakeren får muligheten til å bytte dør
+
+Hva bør deltakeren gjøre for å maksimere sjansen for å vinne bilen?
+:::
+
+::: {.column width="50%"}
+::: {.fragment .highlight-red fragment-index="1"}
+Om deltaker beholder dør nummer 1 = $\frac{1}{3}$ sjanse
+:::
+
+::: {.fragment .highlight-green fragment-index="1"}
+::: {.fragment .fade-up fragment-index="1"}
+Om deltaker bytter til dør 2 = $\frac{2}{3}$ sjanse
+:::
+:::
+
+```{python}
+#| output: false
+import random
+import matplotlib.pyplot as plt
+
+def monty_hall_simulation(num_simulations):
+    stay_wins = 0
+    switch_wins = 0
+    for _ in range(num_simulations):
+        # Set up doors
+        doors = [0, 0, 1]  # 0 represents goat, 1 represents car
+        random.shuffle(doors)
+
+        # Contestant makes initial choice
+        contestant_choice = random.randint(0, 2)
+
+        # Host reveals a goat
+        remaining_doors = [i for i in range(3) if i != contestant_choice and doors[i] == 0]
+        door_revealed = random.choice(remaining_doors)
+
+        # Contestant chooses to stay
+        if doors[contestant_choice] == 1:
+            stay_wins += 1
+
+        # Contestant chooses to switch
+        switched_choice = [i for i in range(3) if i != contestant_choice and i != door_revealed][0]
+        if doors[switched_choice] == 1:
+            switch_wins += 1
+
+    return stay_wins, switch_wins
+
+def simulate_and_plot(max_simulations):
+    stay_win_rates = []
+    switch_win_rates = []
+    simulation_counts = list(range(1, max_simulations + 1))
+
+    for num_simulations in simulation_counts:
+        stay_wins, switch_wins = monty_hall_simulation(num_simulations)
+        stay_win_rate = stay_wins / num_simulations
+        switch_win_rate = switch_wins / num_simulations
+        stay_win_rates.append(stay_win_rate)
+        switch_win_rates.append(switch_win_rate)
+
+    final_stay_win_rate = stay_win_rates[-1] * 100
+    final_switch_win_rate = switch_win_rates[-1] * 100
+    plt.figure(figsize=(12, 6))
+    plt.plot(simulation_counts, stay_win_rates, label=f'Bli: {final_stay_win_rate:.2f}%', color='#D8B70A')
+    plt.plot(simulation_counts, switch_win_rates, label=f'Bytte: {final_switch_win_rate:.2f}%', color='#02401B')
+    plt.xlabel('Simuleringer')
+    plt.ylabel('Vinnerate')
+    plt.title('Monty Hall simuleringer')
+    plt.legend()
+    plt.savefig('dokumentobjekter/figurer/monty_hall_simulation.png', dpi=300)
+
+if __name__ == "__main__":
+    max_simulations = 1000  # You can adjust the maximum number of simulations here
+    simulate_and_plot(max_simulations)
+```
+
+:::{.fragment .fade-left fragment-index="2"}
+![](dokumentobjekter/figurer/monty_hall_simulation.png){width="550" height="350"}
+:::
+:::
+:::
+
+::: notes
+Du er deltaker i et spillshow med tre dører: Bak en dør er det en bil (premien du vil ha), og bak de to andre dørene er det geiter eller ingenting.
+
+Du velger en dør, og verten åpner en annen dør som har en geit bak seg. Du får deretter muligheten til å bytte dør eller beholde den opprinnelige døren.
+
+Hva bør du gjøre for å maksimere sjansen for å vinne bilen?
+
+Bytte dør eller holde seg til den opprinnelige døren?
+
+Når du først valgte en dør, var sannsynligheten for at bilen er bak den døren du valgte 1/3
+
+Sannsynligheten for at bilen er bak en av de to andre dørene er 2/3
+
+Derfor bør du bytte dør for å maksimere sjansen for å vinne bilen
 :::
 
 ## Eksperimentelt oppsett
