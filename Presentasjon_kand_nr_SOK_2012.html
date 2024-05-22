@@ -539,17 +539,11 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="eksperimentelt-oppsett" class="slide level2">
-<h2>Eksperimentelt oppsett</h2>
-<ul>
-<li><p>Før kurset gis begge gruppene 100 kr hver.</p></li>
-<li><p>De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill.</p></li>
-<li><p>I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme.</p></li>
-<li><p>Eksperimentlederen åpner deretter en av de to resterende konvoluttene som er tom og gir deltakeren valget om å bytte til den gjenværende konvolutten eller beholde det opprinnelige valget.</p></li>
-<li><p>Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har deltatt i kurset.</p></li>
-</ul>
+<section id="problemstilling-på-nytt" class="slide level2">
+<h2>Problemstilling på nytt</h2>
+<p><strong>Hva er sannsynligheten for å bytte konvolutt i Monty Hall-problemet, målt som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene?</strong></p>
 <aside class="notes">
-<p>Eksperimentell oppsett: Før kurset gis begge gruppene 100 kr hver. De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill. I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme. Eksperimentlederen åpner deretter en av de to resterende konvoluttene som er tom og gir deltakeren valget om å bytte til den gjenværende konvolutten eller beholde det opprinnelige valget. Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har deltatt i kurset. Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.</p>
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -562,26 +556,56 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="effekt-og-analyse" class="slide level2">
-<h2>Effekt og analyse</h2>
-<ul>
-<li><p>Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.</p></li>
-<li><p>Bevis på best valg</p></li>
-<li><p>For å vise dette matematisk så definerer vi hendelsene:</p></li>
-<li><p><span class="math inline">\(G_i\)</span>: Hendelsen at gevinsten (150 kr) er i konvolutt <span class="math inline">\(i\)</span> (hvor <span class="math inline">\(i\)</span> kan være 1, 2, eller 3).</p></li>
-<li><p><span class="math inline">\(D_j\)</span>: Hendelsen at deltakeren velger konvolutt <span class="math inline">\(j\)</span> (hvor <span class="math inline">\(j\)</span> også kan være 1, 2, eller 3).</p></li>
-<li><p><span class="math inline">\(V_k\)</span>: Hendelsen at verten åpner konvolutt <span class="math inline">\(k\)</span> (hvor <span class="math inline">\(k\)</span> kan være 1, 2, eller 3) og viser at den er tom.</p></li>
-</ul>
+<section id="eksperimentelt-oppsett" class="slide level2">
+<h2>Eksperimentelt oppsett</h2>
+<p>Vi randomiserer deltakerne til enten kontrollgruppen <span class="math inline">\(\overline T\)</span> eller eksperimentgruppen <span class="math inline">\(T\)</span>.</p>
+<p>Kontrollgruppen mottar ikke noe kurs, mens eksperimentgruppen deltar i et kurs i sannsynlighetsteori.</p>
+<p>Begge gruppene får 100 kroner hver.</p>
+<p>De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill.</p>
+<p>I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme.</p>
+<p>Eksperimentlederen åpner deretter en av de to resterende konvoluttene som er tom og gir deltakeren valget om å bytte til den gjenværende konvolutten eller beholde det opprinnelige valget.</p>
+<p>Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har deltatt i kurset.</p>
+<aside class="notes">
+<p>Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighetsregler, forventningsverdier, uavhengighet, og en grundig gjennomgang av Monty Hall-problemet og Bayes’ teorem.</p>
+<p>Merk</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="effekt-og-analyse" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Effekt og analyse</h2>
+<p>Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.</p>
+<p>Da kan vi se hvordan denne informasjonen påvirker eller “oppdaterer” sannsynligheten for at premien befinner seg i en bestemt konvolutt.</p>
+<p>For å vise dette så definerer vi hendelsene:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="r-stack">
+<div data-id="box1" style="background:#3fb618; width: 350px; height: 350px; border-radius: 200px;">
+
+</div>
+<div data-id="box2" style="background: #2780e3; width: 250px; height: 250px; border-radius: 200px;">
+
+</div>
+<div data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;">
+
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
 <aside class="notes">
 <p>Et mål <span class="math inline">\(M_t\)</span> av effekten X på Y ved å studere <span class="math inline">\(M_{\overline T} − M_{\underline T}\)</span> .</p>
 <p>Når vi nå ser hvilke valg de 2 gruppene har tatt, så kan vi se om det har vært en signifikant endring i om de velger å kaste terningen eller ikke.</p>
 <p>Siden vi vet at konvolutten som åpnes er tom så setter vi opp Monty Hall problemet i med Bayes. Da kan vi se hvordan denne informasjonen påvirker eller “oppdaterer” sannsynligheten for at premien befinner seg i en bestemt konvolutt.</p>
-<p>For å vise dette matematisk så definerer vi hendelsene:</p>
-<ul>
-<li><p><span class="math inline">\(G_i\)</span>: Hendelsen at gevinsten (150 kr) er i konvolutt <span class="math inline">\(i\)</span> (hvor <span class="math inline">\(i\)</span> kan være 1, 2, eller 3).</p></li>
-<li><p><span class="math inline">\(D_j\)</span>: Hendelsen at deltakeren velger konvolutt <span class="math inline">\(j\)</span> (hvor <span class="math inline">\(j\)</span> også kan være 1, 2, eller 3).</p></li>
-<li><p><span class="math inline">\(V_k\)</span>: Hendelsen at verten åpner konvolutt <span class="math inline">\(k\)</span> (hvor <span class="math inline">\(k\)</span> kan være 1, 2, eller 3) og viser at den er tom.</p></li>
-</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -594,12 +618,62 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="uavhengighet-sannsynlighet-og-avhengighet" class="slide level2">
-<h2>Uavhengighet, sannsynlighet og avhengighet</h2>
-<ul>
-<li><p>Vi antar at deltakeren velger en konvolutt tilfeldig, og at gevinsten er plassert tilfeldig i en av de tre konvoluttene. Dette betyr at hendelsene <span class="math inline">\(G_i\)</span> og <span class="math inline">\(D_j\)</span> er uavhengige for alle <span class="math inline">\(i\)</span> og <span class="math inline">\(j\)</span> .</p></li>
-<li><p>Før noe valg er gjort, er sannsynligheten for at gevinsten er i en hvilken som helst konvolutt lik: <span class="math display">\[ P(G_i) = P(D_j) = P(V_k) = \frac{1}{3} \]</span> for <span class="math inline">\(i, j, k = 1, 2, 3\)</span>.</p></li>
-</ul>
+<section id="effekt-og-analyse-1" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
+<h2 data-id="quarto-animate-title">Effekt og analyse</h2>
+<p>Vi ser da på differansen i andelen som bytter konvolutt mellom de som har tatt kurset og de som ikke har tatt kurset både før og etter kurset.</p>
+<p>Da kan vi se hvordan denne informasjonen påvirker eller “oppdaterer” sannsynligheten for at premien befinner seg i en bestemt konvolutt.</p>
+<p>For å vise dette så definerer vi hendelsene:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="container">
+<div data-id="box1" data-auto-animate-delay="0" style="background: #3fb618; width: 150px; height: 100px; margin: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+<p><span class="math inline">\(G_i\)</span>:</p>
+</div>
+<div data-id="box2" data-auto-animate-delay="0.1" style="background: #2780e3; width: 150px; height: 100px; margin: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+<p><span class="math inline">\(D_j\)</span>:</p>
+</div>
+<div data-id="box3" data-auto-animate-delay="0.2" style="background: #e83e8c; width: 150px; height: 100px; margin: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+<p><span class="math inline">\(V_k\)</span>:</p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Hendelsen at <span style="color: #3fb618;">gevinsten</span> (150 kr) er i konvolutt <span class="math inline">\(i\)</span> (hvor <span class="math inline">\(i\)</span> kan være 1, 2, eller 3).</p>
+<p>Hendelsen at <span style="color: #2780e3;">deltakeren</span> velger konvolutt <span class="math inline">\(j\)</span> (hvor <span class="math inline">\(j\)</span> også kan være 1, 2, eller 3).</p>
+<p>Hendelsen at <span style="color: #e83e8c;">verten</span> åpner konvolutt <span class="math inline">\(k\)</span> (hvor <span class="math inline">\(k\)</span> kan være 1, 2, eller 3) og viser at den er tom.</p>
+</div>
+</div>
+<aside class="notes">
+<p>Et mål <span class="math inline">\(M_t\)</span> av effekten X på Y ved å studere <span class="math inline">\(M_{\overline T} − M_{\underline T}\)</span> .</p>
+<p>Når vi nå ser hvilke valg de 2 gruppene har tatt, så kan vi se om det har vært en signifikant endring i om de velger å kaste terningen eller ikke.</p>
+<p>Siden vi vet at konvolutten som åpnes er tom så setter vi opp Monty Hall problemet i med Bayes. Da kan vi se hvordan denne informasjonen påvirker eller “oppdaterer” sannsynligheten for at premien befinner seg i en bestemt konvolutt.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="uavhengighet-og-sannsynlighet-og-avhengighet" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Uavhengighet og sannsynlighet og avhengighet</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Vi antar at deltakeren velger en konvolutt tilfeldig, og at gevinsten er plassert tilfeldig i en av de tre konvoluttene.</p>
+<p>Og før noe valg er gjort, er sannsynligheten for at gevinsten er i en hvilken som helst konvolutt lik:</p>
+</div><div class="column" style="width:50%;">
+<p>Dette betyr at hendelsene <span style="color: #3fb618;"><span class="math inline">\(G_i\)</span></span> eller <span style="color: #3fb618;">gevinsten</span> er i konvolutt <span class="math inline">\(i\)</span> og <span style="color: #2780e3;"> <span class="math inline">\(D_j\)</span></span>, <span style="color: #2780e3;">deltakerens</span> valg <span class="math inline">\(j\)</span> er uavhengige for alle <span class="math inline">\(i\)</span> og <span class="math inline">\(j\)</span>.</p>
+<p><span style="color: #3fb618;"><span class="math inline">\(P(G_i)\)</span></span> <span class="math inline">\(=\)</span> <span style="color: #2780e3;"> <span class="math inline">\(P(D_j)\)</span></span> <span class="math inline">\(=\)</span> <span style="color: #e83e8c;"> <span class="math inline">\(p(V_k)\)</span></span> <span class="math inline">\(= \frac{1}{3}\)</span></p>
+<p>for <span class="math inline">\(i, j, k = 1, 2, 3\)</span>.</p>
+</div>
+</div>
+<div class="fragment fade-up">
+<p>Når vi åpner den andre konvolutten så er den avhengig av hvilken konvolutt deltakeren har valgt og hvor gevinsten befinner seg. Vi åpner alltid åpner en tom konvolutt og aldri den som deltakeren har valgt eller den som inneholder gevinsten.</p>
+<p>Dette betyr at: <span class="math display">\[ P(V_k \mid G_i, D_j) \]</span> er 0 hvis <span class="math inline">\(k = i\)</span> eller <span class="math inline">\(k = j\)</span> (med mindre <span class="math inline">\(i = j\)</span>), og ellers 1 delt på antall gjenværende konvolutter.</p>
+</div>
 <aside class="notes">
 <p>Tekst her for speaker notes</p>
 <style type="text/css">
@@ -614,14 +688,19 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="avhengighet" class="slide level2">
-<h2>Avhengighet</h2>
-<ul>
-<li><p>Når vi åpner den andre konvolutten så er den avhengig av hvilken konvolutt deltakeren har valgt og hvor gevinsten befinner seg. Vi åpner alltid åpner en tom konvolutt og aldri den som deltakeren har valgt eller den som inneholder gevinsten.</p></li>
-<li><p>Dette betyr at: <span class="math display">\[ P(V_k \mid G_i, D_j) \]</span> er 0 hvis <span class="math inline">\(k = i\)</span> eller <span class="math inline">\(k = j\)</span> (med mindre <span class="math inline">\(i = j\)</span>), og ellers 1 delt på antall gjenværende konvolutter.</p></li>
-</ul>
+<section id="bayes-teorem-generell-formel" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Bayes teorem generell formel</h2>
+<p>Hva er bayes teorem?</p>
+<p>Bayes teorem er en matematisk formel som beskriver hvordan vi kan oppdatere sannsynligheten for en hendelse gitt ny informasjon.</p>
+<p>Og kan skrives slik:</p>
+<div class="fragment fade-down">
+<p><span class="math display">\[P(A|B) = \frac{P(B|A) P(A)}{P(B|A)P(A)+P(B|\overline A)P(\overline A)}\]</span></p>
+</div>
+<div class="fragment fade-down">
+<p><span class="math display">\[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]</span> Men kan forkortes slik, siden den totale sannsynligheten for <span class="math inline">\(B\)</span> er lik summen av sannsynligheten for <span class="math inline">\(B\)</span> gitt <span class="math inline">\(A\)</span> og sannsynligheten for <span class="math inline">\(B\)</span> gitt ikke <span class="math inline">\(A\)</span>.</p>
+</div>
 <aside class="notes">
-<p>Tekst her for speaker notes</p>
+<p>Hattene betyr bare sannsynligheten for ikke at hendelsen ikke inntreffer.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -634,13 +713,11 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="bayes-teorm" class="slide level2">
-<h2>Bayes teorm</h2>
-<ul>
-<li><p><span class="math display">\[ P(G_i \mid V_k, D_j) = \frac{P(V_k \mid G_i, D_j) \cdot P(G_i)}{P(V_k \mid D_j)} \]</span></p></li>
-<li><p>For å beregne <span class="math inline">\(P(V_k \mid D_j)\)</span> under brøkstreken er sannsynligheten for at verten åpner konvolutt <span class="math inline">\(k\)</span>, gitt at deltakeren har valgt konvolutt <span class="math inline">\(j\)</span>.</p></li>
-<li><p>Dette krever marginalisering over alle mulige steder gevinsten kan være: <span class="math display">\[ P(V_k \mid D_j) = \sum_{i=1}^3 P(V_k \mid G_i, D_j) \cdot P(G_i) \]</span></p></li>
-</ul>
+<section id="bayes-teorem-ved-monty-hall-problemet" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Bayes teorem ved monty hall problemet</h2>
+<p><span class="math display">\[ P(G_i \mid V_k, D_j) = \frac{P(V_k \mid G_i, D_j) \cdot P(G_i)}{P(V_k \mid D_j)} \]</span></p>
+<p>For å beregne <span class="math inline">\(P(V_k \mid D_j)\)</span> under brøkstreken er sannsynligheten for at verten åpner konvolutt <span class="math inline">\(k\)</span>, gitt at deltakeren har valgt konvolutt <span class="math inline">\(j\)</span>.</p>
+<p>Dette krever marginalisering over alle mulige steder gevinsten kan være: <span class="math display">\[ P(V_k \mid D_j) = \sum_{i=1}^3 P(V_k \mid G_i, D_j) \cdot P(G_i) \]</span></p>
 <aside class="notes">
 <p>Bayes teorem forteller oss hvordan vi kan oppdatere sannsynligheten for at gevinsten er i en bestemt konvolutt gitt at verten åpner en annen konvolutt:</p>
 <style type="text/css">
@@ -658,12 +735,10 @@
 <section id="bayes-teorem-forts" class="slide level2">
 <h2>Bayes teorem forts</h2>
 <p>Anta at deltakeren velger konvolutt 1 (<span class="math inline">\(D_1\)</span>) og verten åpner konvolutt 3 ( <span class="math inline">\(V_3\)</span> ), som er tom. Vi vil beregne <span class="math inline">\(P(G_2 \mid V_3, D_1)\)</span>.</p>
-<ul>
-<li><p><span class="math inline">\(P(V_3 \mid G_1, D_1) = 1/2\)</span> fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.</p></li>
-<li><p><span class="math inline">\(P(V_3 \mid G_2, D_1) = 1\)</span> fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.</p></li>
-<li><p><span class="math inline">\(P(V_3 \mid G_3, D_1) = 0\)</span> fordi verten aldri vil åpne konvolutten med gevinsten.</p></li>
-<li><p><span class="math display">\[ P(V_3 \mid D_1) = P(V_3 \mid G_1, D_1) \cdot P(G_1) + P(V_3 \mid G_2, D_1) \cdot P(G_2) + P(V_3 \mid G_3, D_1) \cdot P(G_3) \]</span></p></li>
-</ul>
+<p><span class="math inline">\(P(V_3 \mid G_1, D_1) = 1/2\)</span> fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.</p>
+<p><span class="math inline">\(P(V_3 \mid G_2, D_1) = 1\)</span> fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.</p>
+<p><span class="math inline">\(P(V_3 \mid G_3, D_1) = 0\)</span> fordi verten aldri vil åpne konvolutten med gevinsten.</p>
+<p><span class="math display">\[ P(V_3 \mid D_1) = P(V_3 \mid G_1, D_1) \cdot P(G_1) + P(V_3 \mid G_2, D_1) \cdot P(G_2) + P(V_3 \mid G_3, D_1) \cdot P(G_3) \]</span></p>
 <aside class="notes">
 <p>Notes her</p>
 <style type="text/css">
@@ -680,11 +755,9 @@
 </section>
 <section id="bayes-teorem-forts-1" class="slide level2">
 <h2>Bayes teorem forts</h2>
-<ul>
-<li><p><span class="math display">\[ P(V_3 \mid D_1) = \frac{1}{2} \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3} = \frac{1}{2} \]</span></p></li>
-<li><p><span class="math display">\[ P(G_2 \mid V_3, D_1) = \frac{P(V_3 \mid G_2, D_1) \cdot P(G_2)}{P(V_3 \mid D_1)} = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3} \]</span></p></li>
-<li><p>Dette viser at det er en <span class="math inline">\(\frac{2}{3}\)</span> sannsynlighet for at gevinsten er i den konvolutten deltakeren ikke valgte, som er konvolutt 2 i dette tilfellet.</p></li>
-</ul>
+<p><span class="math display">\[ P(V_3 \mid D_1) = \frac{1}{2} \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3} = \frac{1}{2} \]</span></p>
+<p><span class="math display">\[ P(G_2 \mid V_3, D_1) = \frac{P(V_3 \mid G_2, D_1) \cdot P(G_2)}{P(V_3 \mid D_1)} = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3} \]</span></p>
+<p>Dette viser at det er en <span class="math inline">\(\frac{2}{3}\)</span> sannsynlighet for at gevinsten er i den konvolutten deltakeren ikke valgte, som er konvolutt 2 i dette tilfellet.</p>
 </section>
 <section id="bayes-teorem-eksempel-med-animasjon-om-tid" class="slide level2">
 <h2>Bayes teorem eksempel med animasjon om tid</h2>

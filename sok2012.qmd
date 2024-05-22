@@ -135,7 +135,7 @@ Studien til @williams_does_2006 sier at de studentene som lærte om statistikk o
 
 ## 3. Design ett eksperiment.
 
-Der du måler effekten av X på Y ved hjelp av en kontrollgruppe der individer tilfeldig trekkes inn i gruppe $\overline T$ eller gruppe $T$ .
+Der du måler effekten av X på Y ved hjelp av en kontrollgruppe der individer tilfeldig trekkes inn i gruppe $\overline T$ eller gruppe $T$.
 
 X: Sannsynligheten for å velge å bytte konvolutt i Monty Hall-problemet, målt som andelen deltakere som velger å bytte etter å ha mottatt informasjon om innholdet i en av de andre konvoluttene. Y: Deltakelse i et kurs i sannsynlighet
 
@@ -187,7 +187,7 @@ Dette betyr at: $$ P(V_k \mid G_i, D_j) $$ er 0 hvis $k = i$ eller $k = j$ (med 
 
 ### 4. Bayes Teorem
 
-Bayes teorem forteller oss hvordan vi kan oppdatere sannsynligheten for at gevinsten er i en bestemt konvolutt gitt at verten åpner en annen konvolutt: 
+Bayes teorem forteller oss hvordan vi kan oppdatere sannsynligheten for at gevinsten er i en bestemt konvolutt gitt at verten åpner en annen konvolutt:
 
 $$ 
 P(G_i \mid V_k, D_j) = \frac{P(V_k \mid G_i, D_j) \cdot P(G_i)}{P(V_k \mid D_j)} 
