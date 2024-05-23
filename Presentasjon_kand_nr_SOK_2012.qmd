@@ -313,7 +313,7 @@ Kontrollgruppen mottar ikke noe kurs, mens eksperimentgruppen deltar i et kurs i
 
 Begge gruppene får 100 kroner hver.
 
-De får deretter et tilbud om å bruke 50 kr for å delta i et Monty Hall-lignende spill.
+De må deretter velge å bruke 50 kr for å delta i et Monty Hall-lignende spill hvor de har mulighet å bytte dør.
 
 I spillet velger de en av tre konvolutter. En av konvoluttene inneholder 150 kr, mens de to andre er tomme.
 
@@ -324,7 +324,19 @@ Dette gjøres så igjen for begge gruppene etter at eksperimentgruppen har delta
 ::: notes
 Intervensjon: Kurset i sannsynlighet går raskt over grunnleggende sannsynlighetsregler, forventningsverdier, uavhengighet, og en grundig gjennomgang av Monty Hall-problemet og Bayes' teorem.
 
-Merk
+Merk her var det litt forvirring på tilbakemelding:
+
+I eksperimentet originalt mente vi at deltakerne selv kunne velge om de ville spille eller ikke før de fikk informasjonen om konvoluttene.
+
+Dette tenkte vi for å kunne se om effekten av motivasjon på indre og ytre for deltakerne om de ville spille eller ikke.
+
+Analyzing who chooses to play and who doesn't can provide insights into the participants' motivations, whether they are driven by intrinsic curiosity or extrinsic financial incentives.
+
+Problemet blir da at det er vanskelig å gjøre studie fordi dataene blir binære og det er vanskelig å se på effekten av kurset på sannsynligheten for å bytte konvolutt.
+
+Ellers så er det mulig å innføre en tredje eksperimentgruppe som får velge å spille gratis for å sjekke om loss aversion spiller en rolle i valget om å spille eller ikke.
+
+Eksperimentets mål: Effekt på kunnskap om sannsynlighet påvirker beslutningstaking i et scenario med usikkerhet. Premissene for spillet: Start med tre konvolutter, hvor en inneholder 150kr og to er tomme. Før deltakerne låser inn sitt valg, åpnes en av de tomme konvoluttene. Deltakerne får muligheten til å bytte konvolutt. De må betale 50kr av de 100kr de fikk for å delta i spillet. Eksperimentdesign: Steg 1:: Kontrollgruppe og Eksperimentgruppe får 100kr og spiller spillet uten ekstra opplæring. Steg 2: Kontrollgruppen og Eksperimentgruppen Spiller igjen men eksperimentgruppen har fått et kurs i sannsynlighet. Hypotese: Eksperimentgruppen vil være mer risikotakende og mer tilbøyelige til å bytte konvolutt etter at en tom konvolutt er åpnet, fordi de forstår at sannsynligheten for å vinne øker ved bytte (Monty Hall-problemet). Forventede resultater: Hvis sannsynlighetskurset er effektivt, vil eksperimentgruppen vise en høyere andel rasjonelle valg (bytte konvolutt) sammenlignet med kontrollgruppen. Analyse: Sammenligne andelen deltakere i hver gruppe som velger å bytte konvolutt. Vurdere om kurset i sannsynlighet har en statistisk signifikant effekt på beslutningene.
 :::
 
 ## Effekt og analyse {auto-animate="true" auto-animate-easing="ease-in-out"}
@@ -337,7 +349,7 @@ For å vise dette så definerer vi hendelsene:
 
 ::: columns
 ::: {.column width="50%"}
-::: {.r-stack}
+::: r-stack
 ::: {data-id="box1" style="background:#3fb618; width: 350px; height: 350px; border-radius: 200px;"}
 :::
 
@@ -371,7 +383,7 @@ For å vise dette så definerer vi hendelsene:
 
 ::: columns
 ::: {.column width="50%"}
-::: {.container}
+::: container
 ::: {data-id="box1" auto-animate-delay="0" style="background: #3fb618; width: 150px; height: 100px; margin: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;"}
 $G_i$:
 :::
@@ -387,11 +399,11 @@ $V_k$:
 :::
 
 ::: {.column width="50%"}
-Hendelsen at <span style="color: #3fb618;">gevinsten</span> (150 kr) er i konvolutt $i$ (hvor $i$ kan være 1, 2, eller 3).
+Hendelsen at [gevinsten]{style="color: #3fb618;"} (150 kr) er i konvolutt $i$ (hvor $i$ kan være 1, 2, eller 3).
 
-Hendelsen at <span style="color: #2780e3;">deltakeren</span> velger konvolutt $j$ (hvor $j$ også kan være 1, 2, eller 3).
+Hendelsen at [deltakeren]{style="color: #2780e3;"} velger konvolutt $j$ (hvor $j$ også kan være 1, 2, eller 3).
 
-Hendelsen at <span style="color: #e83e8c;">verten</span> åpner konvolutt $k$ (hvor $k$ kan være 1, 2, eller 3) og viser at den er tom.
+Hendelsen at [verten]{style="color: #e83e8c;"} åpner konvolutt $k$ (hvor $k$ kan være 1, 2, eller 3) og viser at den er tom.
 :::
 :::
 
@@ -405,23 +417,21 @@ Siden vi vet at konvolutten som åpnes er tom så setter vi opp Monty Hall probl
 
 ## Uavhengighet og sannsynlighet og avhengighet {auto-animate="true"}
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
-Vi antar at deltakeren velger en konvolutt tilfeldig, og at gevinsten er plassert tilfeldig i en av de tre konvoluttene. 
+Vi antar at deltakeren velger en konvolutt tilfeldig, og at gevinsten er plassert tilfeldig i en av de tre konvoluttene.
 
-Og før noe valg er gjort, er sannsynligheten for at gevinsten er i en hvilken som helst konvolutt lik: 
+Og før noe valg er gjort, er sannsynligheten for at gevinsten er i en hvilken som helst konvolutt lik:
 :::
 
 ::: {.column width="50%"}
-Dette betyr at hendelsene <span style="color: #3fb618;">$G_i$</span> eller <span style="color: #3fb618;">gevinsten</span> er i konvolutt $i$  og <span style="color: #2780e3;"> $D_j$</span>, <span style="color: #2780e3;">deltakerens</span> valg $j$ er uavhengige for alle $i$ og $j$.
+Dette betyr at hendelsene [$G_i$]{style="color: #3fb618;"} eller [gevinsten]{style="color: #3fb618;"} er i konvolutt $i$ og [ $D_j$]{style="color: #2780e3;"}, [deltakerens]{style="color: #2780e3;"} valg $j$ er uavhengige for alle $i$ og $j$.
 
-<span style="color: #3fb618;">$P(G_i)$</span> $=$ <span style="color: #2780e3;"> $P(D_j)$</span> $=$ <span style="color: #e83e8c;"> $p(V_k)$</span> $= \frac{1}{3}$ 
+[$P(G_i)$]{style="color: #3fb618;"} $=$ [ $P(D_j)$]{style="color: #2780e3;"} $=$ [ $p(V_k)$]{style="color: #e83e8c;"} $= \frac{1}{3}$
 
 for $i, j, k = 1, 2, 3$.
 :::
-
-::::
+:::
 
 ::: {.fragment .fade-up}
 Når vi åpner den andre konvolutten så er den avhengig av hvilken konvolutt deltakeren har valgt og hvor gevinsten befinner seg. Vi åpner alltid åpner en tom konvolutt og aldri den som deltakeren har valgt eller den som inneholder gevinsten.
@@ -433,70 +443,195 @@ Dette betyr at: $$ P(V_k \mid G_i, D_j) $$ er 0 hvis $k = i$ eller $k = j$ (med 
 Tekst her for speaker notes
 :::
 
-
 ## Bayes teorem generell formel {auto-animate="true"}
 
-Hva er bayes teorem? 
+Hva er bayes teorem?
 
 Bayes teorem er en matematisk formel som beskriver hvordan vi kan oppdatere sannsynligheten for en hendelse gitt ny informasjon.
 
 Og kan skrives slik:
 
 ::: {.fragment .fade-down}
-
 $$P(A|B) = \frac{P(B|A) P(A)}{P(B|A)P(A)+P(B|\overline A)P(\overline A)}$$
 :::
 
 ::: {.fragment .fade-down}
-$$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
-Men kan forkortes slik, siden den totale sannsynligheten for $B$ er lik summen av sannsynligheten for $B$ gitt $A$ og sannsynligheten for $B$ gitt ikke $A$.
+$$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$ Men kan forkortes slik, siden den totale sannsynligheten for $B$ er lik summen av sannsynligheten for $B$ gitt $A$ og sannsynligheten for $B$ gitt ikke $A$.
 :::
 
 ::: notes
 Hattene betyr bare sannsynligheten for ikke at hendelsen ikke inntreffer.
 :::
 
+## Bayes teorem ved monty hall problemet {auto-animate="true"}
+
+
+[Gevinsten]{style="color: #3fb618;"}, [deltakerens]{style="color: #2780e3;"} valg, og [vertens]{style="color: #e83e8c;"} valg hvor $i, j, k = 1, 2, 3$
+
+::: {.fragment .fade-down}
+
+$$
+\begin{aligned}
+{P(\color{#3fb618}{G_i})} \mid \color{#2780e3}{D_j} = \frac{{P(\color{#e83e8c}{V_k} \mid \color{#3fb618}{G_i}, \color{#2780e3}{D_j})} \cdot {P(\color{#3fb618}{G_i})}}{{P(\color{#e83e8c}{V_k} \mid \color{#2780e3}{D_j})}}
+\end{aligned}
+$$
+
+:::
+
+
+::: {.fragment .fade-down}
+
+$$
+\begin{aligned}
+P(\color{#e83e8c}{V_k} \mid \color{#2780e3}{D_j}) &= \sum_{i=1}^3 P(\color{#e83e8c}{V_k} \mid \color{#3fb618}{G_i}, \color{#2780e3}{D_j}) \cdot P(\color{#3fb618}{G_i})
+\end{aligned}
+$$
+
+
+:::
+
+::: notes
+1.  "Vi har Bayes 'teorem som beskriver sannsynligheten for at ( G_i ), eller at gevinsten er i konvolutt ( i ), gitt at deltakeren har valgt ( D_j ), eller konvolutt ( j )."
+
+2.  "Dette uttrykket er utledet ved å anvende Bayes 'teorem på Monty Hall-problemet, hvor ( G_i ) representerer at gevinsten er i konvolutt ( i ), og ( D_j ) representerer deltakerens valg av konvolutt ( j )."
+
+3.  "Vi ser på den betingede sannsynligheten for at gevinsten er i konvolutt ( i ), gitt at verten har åpnet konvolutt ( k ) og deltakeren valgte konvolutt ( j )."
+
+4.  "For å beregne ( P(V_k \mid D_j) ), må vi ta hensyn til alle mulige steder hvor gevinsten kan være, representert ved ( G_i ). Dette er summen av produktet av sannsynligheten for at verten åpner konvolutt ( k ) gitt at gevinsten er i konvolutt ( i ), multiplisert med sannsynligheten for at gevinsten er i konvolutt ( i )."
+
+Disse notatene bør hjelpe deg med å forklare trinnene og konseptene som presenteres i ligningene.
+
+For å beregne $P(V_k \mid D_j)$ under brøkstreken er sannsynligheten for at verten åpner konvolutt $k$, gitt at deltakeren har valgt konvolutt $j$.
+
+Dette krever marginalisering over alle mulige steder gevinsten kan være:
+:::
+
+## Bayes teorem ved monty hall problemet {auto-animate=true auto-animate-easing="ease-in-out"}
+
+Anta at deltakeren velger konvolutt 1 ($D_1$) og verten åpner konvolutt 3 ( $V_3$ ), som er tom. Vi vil beregne $P(G_2 \mid V_3, D_1)$.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+$$
+\begin{aligned}
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_1}, \color{#2780e3}{D_1}) &= \color{#3fb618}{\frac{1}{2}} \\
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_2}, \color{#2780e3}{D_1}) &= \color{#3fb618}{1} \\
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_3}, \color{#2780e3}{D_1}) &= \color{#808080}{0}
+\end{aligned}
+$$
+:::
+
+::: {.column width="50%"}
+
+::: {.r-vstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 1px; height: 1px; margin: 90px 850px 30px 0;"}
+:::
+    
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 1px; height: 1px; margin: 10px 850px 30px 0;"}
+:::
+    
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #808080; width: 1px; height: 1px; margin: 10px 850px 30px 0;"}
+:::
+:::
+
+
+
+:::
+::::
+
+
+::: notes
+ fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.
+
+fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.
+
+ fordi verten aldri vil åpne konvolutten med gevinsten.
+:::
 
 
 
 ## Bayes teorem ved monty hall problemet {auto-animate="true"}
 
-$$ P(G_i \mid V_k, D_j) = \frac{P(V_k \mid G_i, D_j) \cdot P(G_i)}{P(V_k \mid D_j)} $$
-
-For å beregne $P(V_k \mid D_j)$ under brøkstreken er sannsynligheten for at verten åpner konvolutt $k$, gitt at deltakeren har valgt konvolutt $j$.
-
-Dette krever marginalisering over alle mulige steder gevinsten kan være: $$ P(V_k \mid D_j) = \sum_{i=1}^3 P(V_k \mid G_i, D_j) \cdot P(G_i) $$
-
-::: notes
-Bayes teorem forteller oss hvordan vi kan oppdatere sannsynligheten for at gevinsten er i en bestemt konvolutt gitt at verten åpner en annen konvolutt:
-:::
-
-## Bayes teorem forts
-
 Anta at deltakeren velger konvolutt 1 ($D_1$) og verten åpner konvolutt 3 ( $V_3$ ), som er tom. Vi vil beregne $P(G_2 \mid V_3, D_1)$.
 
-$P(V_3 \mid G_1, D_1) = 1/2$ fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.
+:::: {.columns}
 
-$P(V_3 \mid G_2, D_1) = 1$ fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.
-
-$P(V_3 \mid G_3, D_1) = 0$ fordi verten aldri vil åpne konvolutten med gevinsten.
-
-$$ P(V_3 \mid D_1) = P(V_3 \mid G_1, D_1) \cdot P(G_1) + P(V_3 \mid G_2, D_1) \cdot P(G_2) + P(V_3 \mid G_3, D_1) \cdot P(G_3) $$
-
-::: notes
-Notes her
+::: {.column width="50%"}
+$$
+\begin{aligned}
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_1}, \color{#2780e3}{D_1}) &= \color{#3fb618}{\frac{1}{2}} \\
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_2}, \color{#2780e3}{D_1}) &= \color{#3fb618}{1} \\
+P(\color{#e83e8c}{V_3} \mid \color{#3fb618}{G_3}, \color{#2780e3}{D_1}) &= \color{#808080}{0}
+\end{aligned}
+$$
 :::
 
-## Bayes teorem forts
+::: {.column width="50%"}
+
+::: {.r-vstack}
+::: {data-id="box1" auto-animate-delay="0" style="width: 150px; height: 150px; margin: 10px 10px 10px 0; border-radius: 75px; background: linear-gradient(to bottom, #3fb618 50%, #808080 50%);"}
+
+:::
+    
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 150px; height: 150px; margin: 10px 10px 10px 0; border-radius: 75px;"}
+:::
+    
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #808080; width: 150px; height: 150px; margin: 10px 10px 100px 0; border-radius: 75px;"}
+:::
+:::
+
+
+
+:::
+
+::::
+
+
+::: notes
+ fordi verten må velge mellom konvolutt 2 og 3 når gevinsten er i konvolutt 1 og deltakeren har valgt konvolutt 1.
+
+fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og deltakeren har valgt konvolutt 1.
+
+ fordi verten aldri vil åpne konvolutten med gevinsten.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Bayes teorem avslutning
+
+:::: {.columns}
+
+::: {.column width="50%"}
+$$ P(V_3 \mid D_1) = P(V_3 \mid G_1, D_1) \cdot P(G_1) + P(V_3 \mid G_2, D_1) $$
+$$  \cdot P(G_2) + P(V_3 \mid G_3, D_1) \cdot P(G_3) $$
 
 $$ P(V_3 \mid D_1) = \frac{1}{2} \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3} = \frac{1}{2} $$
 
 $$ P(G_2 \mid V_3, D_1) = \frac{P(V_3 \mid G_2, D_1) \cdot P(G_2)}{P(V_3 \mid D_1)} = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3} $$
 
 Dette viser at det er en $\frac{2}{3}$ sannsynlighet for at gevinsten er i den konvolutten deltakeren ikke valgte, som er konvolutt 2 i dette tilfellet.
-
-## Bayes teorem eksempel med animasjon om tid
-
-::: notes
-Notes her bruh
 :::
+
+::: {.column width="50%"}
+:::
+
+![](dokumentobjekter/figurer/bayes_geometrisk.png){.absolute top=52 right=-150 width="400" height="550"}
+
+
+::::
