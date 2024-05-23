@@ -597,22 +597,6 @@ fordi verten bare kan åpne konvolutt 3 når gevinsten er i konvolutt 2 og delta
 :::
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Bayes teorem avslutning
 
 :::: {.columns}
