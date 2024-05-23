@@ -619,3 +619,9 @@ Dette viser at det er en $\frac{2}{3}$ sannsynlighet for at gevinsten er i den k
 
 
 ::::
+
+::: notes
+Kanskje noen notes her mon tro
+
+men hvem vet
+:::
